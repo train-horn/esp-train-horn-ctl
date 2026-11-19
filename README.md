@@ -114,7 +114,7 @@ For step-by-step install guides for horns, relays, compressors and air lines, se
 The host tests use gcc or clang and need no ESP-IDF:
 
 ```sh
-make -C test        # 102 checks: pattern timing, duty cap, interlock truth table, math vectors
+make -C test        # 104 checks: pattern timing, duty cap, interlock truth table, math vectors
 ```
 
 ## About

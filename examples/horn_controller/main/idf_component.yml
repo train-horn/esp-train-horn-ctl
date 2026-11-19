@@ -1,0 +1,5 @@
+dependencies:
+  idf: ">=5.3"
+  train-horn/train_horn_ctl:
+    version: "*"
+    override_path: "../../../"

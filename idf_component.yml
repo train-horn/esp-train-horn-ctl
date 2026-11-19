@@ -1,0 +1,29 @@
+version: "1.0.0"
+description: "Train horn controller logic in pure C99: non-blocking FRA grade-crossing (long-long-short-long) pattern sequencer, solenoid duty-cycle limiter, pressure/ignition interlock with compressor hysteresis, and dB-at-distance / air-tank runtime math."
+url: "https://train-horn.com/install/"
+repository: "https://github.com/train-horn/esp-train-horn-ctl"
+issues: "https://github.com/train-horn/esp-train-horn-ctl/issues"
+license: "MIT"
+tags:
+  - train_horn
+  - air_horn
+  - solenoid
+  - relay
+  - compressor
+  - automotive
+targets:
+  - esp32
+  - esp32s2
+  - esp32s3
+  - esp32c2
+  - esp32c3
+  - esp32c5
+  - esp32c6
+  - esp32h2
+  - esp32p4
+dependencies:
+  idf: ">=4.4"
+files:
+  exclude:
+    - "test/build/**/*"
+    - "**/build/**/*"

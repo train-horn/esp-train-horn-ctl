@@ -93,6 +93,7 @@ static void test_custom_and_invalid_patterns(void)
 {
     static const th_step_t two_short[] = { { 300, 200 }, { 300, 0 } };
     static const th_step_t zero[] = { { 0, 0 } };
+    th_step_t fra_buf[TH_FRA_STEPS];
     th_pattern_t p = { two_short, 2, false };
     th_pattern_t bad = { zero, 1, false };
     th_pattern_t empty = { two_short, 0, false };
@@ -108,7 +109,8 @@ static void test_custom_and_invalid_patterns(void)
     CHECK(!th_seq_start(&s, &empty));
     CHECK(!th_seq_start(&s, NULL));
     CHECK(!th_pattern_fra(NULL, 1, 1, 1, false, &p));
-    CHECK(!th_pattern_fra((th_step_t *)zero, 0, 1, 1, false, &p));
+    CHECK(!th_pattern_fra(fra_buf, 0, 1, 1, false, &p));
+    CHECK(!th_pattern_fra(fra_buf, 1, 0, 1, false, &p));
 }
 
 static void test_duty_cap(void)
